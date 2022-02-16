@@ -70,6 +70,8 @@ const Section1 = {
       cy.get(Section1.elements.getTableRow).not(Section1.elements.getTableHeader).should('have.length', expectedRow);
     },
 
+
+    // I got the entries but i have no idea how to get the exact rows and assert it
     assertRoleUserEntries() {
       cy.get('tr > th:nth-of-type(5)').each(($el, index, list) => {
         const text = $el.text();
@@ -83,6 +85,7 @@ const Section1 = {
       })
     },
 
+    // I got the entries but i have no idea how to get the exact rows and assert it
     assertDOB() {
       cy.get('tr > th:nth-of-type(4)').each(($d, index, list) => {
         const date = $d.text();
@@ -93,7 +96,6 @@ const Section1 = {
 
           for (const num of entry) {
             counts[num] = counts[num] ? counts[num] + 1 : 1;
-           const row = counts[num];
           }
 
           cy.log(counts[index])

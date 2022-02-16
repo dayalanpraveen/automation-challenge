@@ -61,11 +61,14 @@ const Section2 = {
       })
     },
 
+    // I have used both conventional and plugin methods but this fails as the click is not happening.
+
     assertDownloadFile() {
       cy.get(Section2.elements.downloadFileButtonElement).contains('Click me!').should('be.visible').click({ force: true });
 
       cy.verifyDownload('javascript-logo.png');
 
+      // Conventional method
       // const downloadsFolder = Cypress.config('downloadsFolder');
       // const downloadedFilename = path.join(downloadsFolder, 'javascript-logo.png')
 

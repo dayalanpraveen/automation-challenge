@@ -20,6 +20,7 @@ describe('Problem 2', () => {
     Section2.actions.assertOpeningNewTab();
   })
 
+  // This Fails because the click is not happening . I have tried with {Force:true} no luck
   it('assert download file', () => {
     Section2.actions.assertDownloadFile();
   })

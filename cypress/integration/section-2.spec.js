@@ -7,4 +7,20 @@ describe('Problem 2', () => {
    *
    * Test away!
    */
+
+  beforeEach('Visit section2', () => {
+    cy.visit('/section-2')
+  })
+
+  it('assert long network call', () => {
+    Section2.actions.assertNetworkCall();
+  })
+
+  it('assert opening a new tab', () => {
+    Section2.actions.assertOpeningNewTab();
+  })
+
+  it('assert download file', () => {
+    Section2.actions.assertDownloadFile();
+  })
 })
